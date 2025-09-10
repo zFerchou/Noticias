@@ -4,6 +4,13 @@ const InfoPage = () => {
   // ID del video de YouTube proporcionado
   const youtubeVideoId = "aqA6SeE959U";
 
+  // URLs de imágenes desde Google/imágenes externas
+  const diagramImageUrl = "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+  
+  const architectureImageUrl = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+  
+  const mobileAppImageUrl = "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+
   return (
     <div
       style={{
@@ -110,6 +117,23 @@ const InfoPage = () => {
           🎯 Resumen de Conceptos Clave
         </h2>
 
+        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+          <img
+            src={architectureImageUrl}
+            alt="Arquitectura de software"
+            style={{
+              maxWidth: "100%",
+              width: "min(100%, 600px)",
+              borderRadius: "8px",
+              boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
+              marginBottom: "1rem",
+            }}
+          />
+          <p style={{ fontSize: "0.9rem", color: "#666", fontStyle: "italic" }}>
+            Ejemplo de arquitectura de software moderna
+          </p>
+        </div>
+
         <h3 style={{ 
           marginTop: "1.5rem", 
           color: "#374151",
@@ -210,26 +234,48 @@ const InfoPage = () => {
           marginBottom: "1.5rem",
           fontSize: "clamp(1.4rem, 4vw, 1.8rem)"
         }}>
-          🖼️ Diagrama
+          🖼️ Diagramas de Arquitectura
         </h2>
         <div style={{ 
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "1.5rem"
+          gap: "2rem"
         }}>
-          {/* Diagrama existente */}
-          <img
-            src="/diagrama.jpg"
-            alt="Diagrama arquitectura"
-            style={{
-              maxWidth: "100%",
-              width: "min(100%, 600px)",
-              borderRadius: "8px",
-              boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
-            }}
-          />
+          {/* Diagrama principal */}
+          <div>
+            <img
+              src={diagramImageUrl}
+              alt="Diagrama de arquitectura de aplicaciones móviles"
+              style={{
+                maxWidth: "100%",
+                width: "min(100%, 600px)",
+                borderRadius: "8px",
+                boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
+              }}
+            />
+            <p style={{ fontSize: "0.9rem", color: "#666", fontStyle: "italic", marginTop: "0.5rem" }}>
+              Diagrama de arquitectura típica de aplicaciones móviles
+            </p>
+          </div>
+
+          {/* Imagen adicional */}
+          <div>
+            <img
+              src={mobileAppImageUrl}
+              alt="Desarrollo de aplicaciones móviles"
+              style={{
+                maxWidth: "100%",
+                width: "min(100%, 500px)",
+                borderRadius: "8px",
+                boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
+              }}
+            />
+            <p style={{ fontSize: "0.9rem", color: "#666", fontStyle: "italic", marginTop: "0.5rem" }}>
+              Proceso de desarrollo de aplicaciones móviles modernas
+            </p>
+          </div>
         </div>
       </section>
 
@@ -243,6 +289,9 @@ const InfoPage = () => {
         marginTop: "auto"
       }}>
         <p>© 2023 Arquitectura de Aplicaciones Móviles. Todos los derechos reservados.</p>
+        <p style={{ fontSize: "0.8rem", marginTop: "0.5rem" }}>
+          Imágenes de fuentes externas - Unsplash
+        </p>
       </footer>
 
       {/* Estilos globales para body y html */}
@@ -304,10 +353,6 @@ const InfoPage = () => {
             
             p, li {
               font-size: 0.95rem !important;
-            }
-            
-            video {
-              border-width: 2px !important;
             }
           }
         `}
