@@ -93,7 +93,7 @@ const InfoPage = () => {
           ></iframe>
         </div>
         <p style={{ marginTop: "1rem", fontSize: "0.9rem", color: "#666" }}>
-          Video: "¿Cómo aprender Inteligencia Artificial en 2024?" - Todo Code
+          Video: "Podcast sobre IA" - zFerchou
         </p>
       </section>
 
