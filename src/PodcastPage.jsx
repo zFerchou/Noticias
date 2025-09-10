@@ -4,12 +4,10 @@ const InfoPage = () => {
   // ID del video de YouTube proporcionado
   const youtubeVideoId = "aqA6SeE959U";
 
-  // URLs de imágenes desde Google/imágenes externas
-  const diagramImageUrl = "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
-  
-  const architectureImageUrl = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
-  
-  const mobileAppImageUrl = "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+  // ===== DIAGRAMAS DE ARQUITECTURA REALES =====
+  const diagramImageUrl = "https://miro.medium.com/v2/resize:fit:1400/1*6_rmn_2U-xW57h2XqKqTw.png";
+  const architectureImageUrl = "https://developer.android.com/static/guide/platform/images/android-stack_2x.png";
+  const mobileAppImageUrl = "https://www.altexsoft.com/media/2021/12/mobile-app-architecture.png";
 
   return (
     <div
@@ -114,7 +112,7 @@ const InfoPage = () => {
           fontSize: "clamp(1.4rem, 4vw, 1.8rem)",
           marginBottom: "1.5rem"
         }}>
-          🎯 Resumen de Conceptos Clave
+          🖼️ Diagramas de Arquitectura
         </h2>
 
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
@@ -128,9 +126,12 @@ const InfoPage = () => {
               boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
               marginBottom: "1rem",
             }}
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
           />
           <p style={{ fontSize: "0.9rem", color: "#666", fontStyle: "italic" }}>
-            Ejemplo de arquitectura de software moderna
+            
           </p>
         </div>
 
@@ -219,7 +220,7 @@ const InfoPage = () => {
         </ul>
       </section>
 
-      {/* Diagramas o imágenes */}
+      {/* Sección de Diagramas */}
       <section
         style={{
           background: "#fff",
@@ -234,8 +235,10 @@ const InfoPage = () => {
           marginBottom: "1.5rem",
           fontSize: "clamp(1.4rem, 4vw, 1.8rem)"
         }}>
-          🖼️ Diagramas de Arquitectura
+          
         </h2>
+        
+        {/* Diagramas colocados aquí, después del título */}
         <div style={{ 
           textAlign: "center",
           display: "flex",
@@ -254,9 +257,12 @@ const InfoPage = () => {
                 borderRadius: "8px",
                 boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
               }}
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
             />
             <p style={{ fontSize: "0.9rem", color: "#666", fontStyle: "italic", marginTop: "0.5rem" }}>
-              Diagrama de arquitectura típica de aplicaciones móviles
+              
             </p>
           </div>
 
@@ -271,9 +277,12 @@ const InfoPage = () => {
                 borderRadius: "8px",
                 boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
               }}
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
             />
             <p style={{ fontSize: "0.9rem", color: "#666", fontStyle: "italic", marginTop: "0.5rem" }}>
-              Proceso de desarrollo de aplicaciones móviles modernas
+              
             </p>
           </div>
         </div>
@@ -289,9 +298,6 @@ const InfoPage = () => {
         marginTop: "auto"
       }}>
         <p>© 2023 Arquitectura de Aplicaciones Móviles. Todos los derechos reservados.</p>
-        <p style={{ fontSize: "0.8rem", marginTop: "0.5rem" }}>
-          Imágenes de fuentes externas - Unsplash
-        </p>
       </footer>
 
       {/* Estilos globales para body y html */}
